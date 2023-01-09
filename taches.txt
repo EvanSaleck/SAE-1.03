@@ -1,0 +1,5 @@
+Alexian : X
+Camille : X
+Elouan : X
+Gwendal : X
+Evan : regions.conf(100%)
