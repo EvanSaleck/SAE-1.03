@@ -11,6 +11,7 @@ Donc pour ce faire il vous suffit d'ouvrir un terminal de commande :
     
   Sous Linux : 
       Dans votre dossier ou se trouve nos scripts et les fichiers textes faites clic droit puis 'ouvrir un terminal ici' puis :
-          # chmod +x run.sh
-          # ./run.sh
+         ``` Bash
+         chmod +x run.sh
+         ./run.sh ```
 
