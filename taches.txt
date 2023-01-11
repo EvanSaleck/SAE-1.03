@@ -1,5 +1,5 @@
-Alexian : X
-Camille : X
-Elouan : X
-Gwendal : X
-Evan : regions.conf(100%)
+Alexian : Page HTML/CSS (100%)
+Camille : script d'extraction de données en PHP (45%)
+Elouan : Script d'extraction de données en PHP (5%)
+Gwendal : Script d'extraction de données en PHP (5%), Création d'un fichier BASH permettant d'executer tout nos scripts d'un seul coup (65%), fichier BASH permettant de mettre nos images en gris (100%)
+Evan : regions.conf avec un format PHP (100%), script d'extraction de données en PHP (45%), Fichier BASH permettant d'executer tout nos scripts d'un seul coup (35%)
