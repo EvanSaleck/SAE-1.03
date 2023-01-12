@@ -1,1 +1,0 @@
-docker run --rm -v %cd%:/work/ bigpapoo/sae103-php:latest php /work/sae103.php
