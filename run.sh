@@ -6,29 +6,35 @@ if ! [ -x "$(command -v docker)" ]; then
   sh get-docker.sh
   rm get-docker.sh
 else
-  echo "Docker is already installed."
+  echo "Docker est déjà installé."
 fi
 #Telechargement de l'image du container 
 docker pull docker.io/bigpapoo/sae103-php:latest
 
 # Lancement du container
-docker run --rm -v -it  -d --name sae103-php  docker.io/bigpapoo/sae103-php:latest
+mv fichiers.txt Docker/$(whoami):/work
+mv sae103.php Docker/$(whoami):/work
+mv data_extraite Docker/$(whoami):/work
 
 # Delai pour laisser le temps au container de se lancer
 sleep 5
 
-# envoi de fichier au container
-docker cp ./sae103.php sae103-php:/app 
-docker cp ./fichiers.txt sae103-php:/app
-docker cp ./data_extraite sae103-php:/app  
 
-# Execution du script php
-docker exec -it sae103-php php sae103.php
+docker run --rm -ti -v /Docker/$(whoami):/work -w /work sae103-php ./sae103.php
 
-# Copie du fichier resultat dans le repertoire courant
-docker cp sae103-php:/app/data_extraite ./
+# Delai pour laisser le temps au container de se lancer
+sleep 5
+
+mv Docker/$(whoami):/work/data_extraite ./
 
 # Suppression du container
-docker rm -f sae103-php
+docker rmi sae103-php
+
+# Suppression de l'image
+docker rmi docker.io/bigpapoo/sae103-php:latest
+
+echo "Fin du script"
+
+
 
 
