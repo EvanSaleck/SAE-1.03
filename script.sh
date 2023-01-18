@@ -16,7 +16,7 @@
 for values in *.png
 do 
     convert $values -colorspace Gray $values
-    convert -rezise 200x200 $values 
+    convert -resize 200x200 $values 
 
 done
 
