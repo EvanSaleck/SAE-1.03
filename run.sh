@@ -52,6 +52,7 @@ do
     convert $values -resize 200x200 $values
     convert $values -crop 200x185+0+0 $values 
     convert $values -resize 200x200 $values
+    rename 's/.svg.png/.png/' *.svg.png
 done
 
 
