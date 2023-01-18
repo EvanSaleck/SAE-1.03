@@ -35,25 +35,8 @@ docker rmi docker.io/bigpapoo/sae103-php:latest
 
 echo "Fin du script"
 
-#!/bin/bash
+for file in *.svg.png; do mv "$file" "${file%.svg.png}.png"; done
 
-#Conversion des fichiers svg en png
-for values in *.svg
-do 
-    convert "$values" "$values.png"
-done
-
-#Changement taille de l'image + mise en nuance de gris
-for values in *.png
-do 
-    convert $values -colorspace Gray $values
-    convert $values -resize 200x200 $values
-    convert $values -crop 200x185+0+0 $values 
-    convert $values -resize 200x200 $values
-done
-
-#Renommer les fichiers pour enlever .svg de leur nom
-rename 's/.svg.png/.png/' *.svg.png
 
 
 
