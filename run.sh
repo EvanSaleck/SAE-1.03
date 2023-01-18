@@ -35,7 +35,6 @@ docker rmi docker.io/bigpapoo/sae103-php:latest
 
 echo "Fin du script"
 
-for file in *.svg.png; do mv "$file" "${file%.svg.png}.png"; done
 
 
 
