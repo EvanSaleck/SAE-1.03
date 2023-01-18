@@ -1,22 +1,14 @@
  #!/bin/bash
- for values in *.svg
+
+ #Convertion des fichiers svg en png
+ for values in *.svg #On parcours toutes les images svg
  do 
-     convert "$values" "$values.png"
+     convert "$values" "${values:0:3}.png" #on convertit les images en png
  done
 
 
-
-# Vérifier si ImageMagick est installé
-# if ! [ -x "$(command -v convert)" ]; then
-#   echo 'Error: ImageMagick is not installed.' >&2
-#   exit 1
-# fi
-
-# Spécifier le nom de l'image d'entrée et de sortie
-for values in *.png
+for values in *.png #On parcours toutes les images png
 do 
-    convert $values -colorspace Gray $values
-    convert -resize 200x200 $values 
-
+        docker run --rm -v $(pwd)/tetes:/work bigpapoo/sae103-imagick "magick $nomSvg -resize 200x200 -gravity North -extent 200x185 -resize 200x200 -colorspace Gray ./output/$nomFichier.png"
 done
 
