@@ -35,6 +35,26 @@ docker rmi docker.io/bigpapoo/sae103-php:latest
 
 echo "Fin du script"
 
+ #!/bin/bash
+
+ #Convertion des fichiers svg en png
+ for values in *.svg
+ do 
+    convert "$values" "$values.png"
+ done
+
+
+
+#changement taille de l'image + mise en nuance de gris
+for values in *.png
+do 
+    convert $values -colorspace Gray $values
+    convert $values -resize 200x200 $values
+    convert $values -crop 200x185+0+0 $values 
+    convert $values -resize 200x200 $values
+done
+
+
 
 
 
