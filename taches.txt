@@ -1,0 +1,5 @@
+Evan : 80% du PHP et 20 % de bash et 100 % de l'utilisation de docker
+Gwendal: 80 % de bash 5% de php
+ALexian : 5 % de php
+Camille : 5 % de php
+ELouan : 5 % de php

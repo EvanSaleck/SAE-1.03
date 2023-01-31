@@ -1,0 +1,10 @@
+C'est un script pour automatiser vos rapports trimestriels 
+Veillez a bien avoir docker et docker-compose d'installer sur votre machine.
+
+Vos fichiers textes doivent rester tels que sur mon exemple. "Bretagne.txt"
+
+Pour lancer ce script il vous suffit de lancer la commande suivante :
+   chmod +x run.sh
+    ./run.sh
+
+Ensuite tout se fera automatiquement et vous n'aurez qu'a remplir certaines informations necessaires au bon fonctionnement du script.
