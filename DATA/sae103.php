@@ -52,20 +52,10 @@ foreach($fileToTreat as $file){
 
     $meilleurs = trim(substr($content,$debutMeilleursCommerciaux,$finMeilleursCommerciaux-$debutMeilleursCommerciaux));
 
-    //envoie les trois meilleurs commerciaux dans un tableau
-    $meilleurs = explode(' ', $meilleurs3);
-    //envoie les trois meilleurs commerciaux dans un tableau
-    $meilleurs3 = array_slice($meilleurs, 0, 3);
-    // Supprime les trois premiers éléments du tablea
-
-
-
-
     // Ajoute dans notre fichier $fileName_commerciaux.dat toute les données récupérées précédemment portant le nom de variable $meilleurs avec une meilleure possibilité de travail des données donc séparée en plusieurs colonnes et titres
     file_put_contents(__DIR__.'/data_extraite/comm/'.$fileName.'_comm.dat',json_encode([
         // Pour chaque antislash on crée une nouvelle colonne
-        '3meilleurs' => $meilleurs3,
-        'meilleurs-bon' => explode('\\',$meilleurs)
+        'meilleurs' => explode('\\',$meilleurs)
     ]));
 
 }
